@@ -1,0 +1,30 @@
+telnet 10.10.10.2  --> pcről be menni switchbe
+
+copy running-config startup-config     --> elmenti a konfigurációt
+
+sh running-config  --> memutatja
+
+service password-encryption   --> jelszo titkositás  (ha beirod hogy sh running-config akkor a kód helyett csak számokat látsz)
+
+show ip ssh
+
+ip domain-name cisco.com
+
+crypto key generate rsa
+
+username admin secret ccna
+
+S1(config)# line vty 0 15              --> letiltja a telnet hozzáférést   --> A line vty 0 15 paranccsal vonali konfigurációs módba lépünk. A végén a 0 15 azt jelenti, hogy 16 felhasználó tud egyszerre belépni, akkor is ha ugyanazzal a névvel lép be a felhasználó.
+no password   --> line vty nek kiveszi a passwordját
+S1(config-line)# transport input ssh
+S1(config-line)# login local   --> A login local, megadja, hogy felhasználónév, jelszó páros a helyi adatbázisból legyen ellenőrizve.
+S1(config-line)# exit
+
+ip ssh version 2
+
+
+
+______________________________________________________________________________________ jo linkek weboldalak a tanuláshoz
+
+https://szit.hu/doku.php?id=oktatas:halozat:cisco:router
+
