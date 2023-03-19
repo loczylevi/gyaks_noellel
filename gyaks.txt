@@ -1,0 +1,14 @@
+show ip interface brief | exclude unassigned            --> kiirja a portok IP cimét 
+
+
+show ip route | begin Gate                            --> default gatewayeket kiirja
+
+
+
+show interface | include Desc|conn                     -->  portok milyen állapotban vannak
+
+show interface | include duplex                        --> kereső lekérdezés include után lehet keresni amit beirsz az include után azt keresi meg
+
+show ipv6 int brief                                   -->  portok milyen állapotban vannak
+
+
