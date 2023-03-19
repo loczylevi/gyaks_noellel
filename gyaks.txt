@@ -12,3 +12,9 @@ show interface | include duplex                        --> kereső lekérdezés 
 show ipv6 int brief                                   -->  portok milyen állapotban vannak
 
 
+no ipv6 address 2001:db8:c0de:14::1/64     --> ipv6 nál "no"-t kell használni hogí fewlül irjuk egy ipv6 cimet 
+ipv6 address 2001:db8:c0de:13::1/64         _-> mint ahogy az alábbi bal oldali példám mutatja
+
+
+
+ sh run | include ipv6|interface          --> 
