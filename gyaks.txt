@@ -18,3 +18,28 @@ ipv6 address 2001:db8:c0de:13::1/64         _-> mint ahogy az alábbi bal oldali
 
 
  sh run | include ipv6|interface          --> 
+ 
+ 
+ ________________________________________________________________jelszó_____________________
+ 
+ enable secret Ciscoenpa55   --> titkositott jelszó beállitás
+ 
+ 
+ R1(config)# line console 0
+R1(config-line)# password titok                     --> Felhasználói EXEC mód jelszava
+
+A felhasználói módba való belépés is korlátozható jelszóval, a console vonali speciális konfigurációs módban. Ehhez be kell lépni ebbe a módba a „line console 0” utasítással.                                           A line console 0 belép a speciális vonli konfigurációs módba konzol konfiguráláshoz. A password titok utasítás beállít a konzol számára egy jelszót. A login megmondja, hogy ezt a jelszót szeretnénk azonosításra használni. Az end visszalép előjogos módba. Ha az exit paranccsal lépek ki, akkor globális konfigurációs módba kerülök.
+
+R1(config-line)# login
+R1(config-line)# end
+R1#
+
+
+
+banner motd #Üzenet#    --> üzenet
+
+
+copy running-config startup-config         --> A futó konfiguráció a RAM-ban van. Újraindítás után elvész. Szükség van a mentésére. Ezt a következő paranccsal tehetjük meg:
+
+int g0/0
+description SW1 LAN
